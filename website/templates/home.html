@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<br/>
+<h1 align="center">Uždaviniai</h1>
+<br/>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Uždavinys</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for problem in problems %}
+    <tr>
+      <td>{{ problem.data }}</td>
+      <td><a href="/problem/{{ problem.id }}">Peržiūrėti</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<br/>
+{% endblock %}

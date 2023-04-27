@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Note{% endblock %}
+{% block content %}
+<br/>
+<body>
+<iframe src="/pdf/{{problem_id}}" width="100%" height="600"></iframe>
+<body>
+<br/>
+<br/>
+<form method="POST">
+  <textarea name="submitted_code" id="submitted_code" class="form-control" rows="7" cols="80"></textarea>
+  <br/>
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Pateikti kodą</button>
+  </div>
+</form>
+{% endblock %}
